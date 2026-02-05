@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <h1>Lista de Tareas Team Dev</h1>
+    <div id="app">
+        <input id="nueva-tarea" placeholder="Nueva tarea...">
+        <button onclick="agregarTarea()">Agregar</button>
+        <ul id="lista-tareas"></ul>
+    </div>
+    <script>
+        function agregarTarea() {
+            const input = document.getElementById('nueva-tarea');
+            const lista = document.getElementById('lista-tareas');
+            const li = document.createElement('li');
+            li.textContent = input.value;
+            lista.appendChild(li);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
